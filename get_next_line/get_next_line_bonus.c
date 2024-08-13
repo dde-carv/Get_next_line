@@ -6,7 +6,7 @@
 /*   By: dde-carv <dde-carv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 16:56:00 by dde-carv          #+#    #+#             */
-/*   Updated: 2024/07/01 11:30:42 by dde-carv         ###   ########.fr       */
+/*   Updated: 2024/08/12 11:56:29 by dde-carv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,30 @@ char	*get_next_line(int fd)
 				buffer[fd][len1++] = buffer[fd][len];
 			if (buffer[fd][len] == '\n')
 				nl = 1;
-			buffer[fd][len++] = 0; 
+			buffer[fd][len++] = 0;
 		}
 	}
 	return(line);
 }
+
+/*
+#include <stdio.h>
+int main(void)
+{
+	int fd1 = open("lol.txt", O_RDONLY);
+	int fd2 = open("lol2.txt", O_RDONLY);
+	char *line1;
+	char *line2;
+	while ((line1 = get_next_line(fd1)) != NULL
+	&& (line2 = get_next_line(fd2)) != NULL)
+	{
+		printf("%s", line1);
+		printf("%s", line2);
+		free(line1);
+		free(line2);
+	}
+	printf("%c", '\n');
+	close(fd1);
+	close(fd2);
+	return 0;
+} */

@@ -6,7 +6,7 @@
 /*   By: dde-carv <dde-carv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 16:36:57 by dde-carv          #+#    #+#             */
-/*   Updated: 2024/07/01 11:31:20 by dde-carv         ###   ########.fr       */
+/*   Updated: 2024/08/12 14:33:58 by dde-carv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*get_next_line(int fd)
 				buffer[len1++] = buffer[len];
 			if (buffer[len] == '\n')
 				nl = 1;
-			buffer[len++] = 0; 
+			buffer[len++] = 0;
 		}
 	}
 	return(line);
@@ -45,11 +45,6 @@ char	*get_next_line(int fd)
 int main(void)
 {
 	int fd = open("lol.txt", O_RDONLY);
-	if (fd == -1)
-	{
-		perror("Error opening file.\n");
-		return 1;
-	}
 	char *line;
 	while ((line = get_next_line(fd)) != NULL)
 	{
