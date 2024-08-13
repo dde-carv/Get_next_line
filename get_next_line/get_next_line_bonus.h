@@ -6,7 +6,7 @@
 /*   By: dde-carv <dde-carv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 16:55:54 by dde-carv          #+#    #+#             */
-/*   Updated: 2024/08/13 11:40:08 by dde-carv         ###   ########.fr       */
+/*   Updated: 2024/08/13 14:28:00 by dde-carv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@
 # endif
 
 char	*get_next_line(int fd);
-char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strjoin(char *s1, char *s2);
 
 #endif
