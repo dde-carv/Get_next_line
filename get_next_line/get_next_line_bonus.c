@@ -6,7 +6,7 @@
 /*   By: dde-carv <dde-carv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 16:56:00 by dde-carv          #+#    #+#             */
-/*   Updated: 2024/08/12 11:56:29 by dde-carv         ###   ########.fr       */
+/*   Updated: 2024/08/13 11:39:48 by dde-carv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*get_next_line(int fd)
 	char		*line;
 	size_t		len;
 	size_t		len1;
-	int		nl;
+	int			nl;
 
 	if (BUFFER_SIZE <= 0)
 		return (NULL);
@@ -38,7 +38,7 @@ char	*get_next_line(int fd)
 			buffer[fd][len++] = 0;
 		}
 	}
-	return(line);
+	return (line);
 }
 
 /*
