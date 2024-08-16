@@ -6,7 +6,7 @@
 /*   By: dde-carv <dde-carv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 16:56:00 by dde-carv          #+#    #+#             */
-/*   Updated: 2024/08/13 11:39:48 by dde-carv         ###   ########.fr       */
+/*   Updated: 2024/08/16 17:49:35 by dde-carv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char	*get_next_line(int fd)
 {
-	static char	buffer[FDOPEN + 1][BUFFER_SIZE + 1];
+	static char	buffer[FOPEN_MAX + 1][BUFFER_SIZE + 1];
 	char		*line;
 	size_t		len;
 	size_t		len1;
 	int			nl;
 
-	if (BUFFER_SIZE <= 0)
+	if (BUFFER_SIZE <= 0 || (read(fd, 0, 0) < 0))
 		return (NULL);
 	line = NULL;
 	nl = 0;
