@@ -6,7 +6,7 @@
 /*   By: dde-carv <dde-carv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 16:56:00 by dde-carv          #+#    #+#             */
-/*   Updated: 2024/08/29 14:28:34 by dde-carv         ###   ########.fr       */
+/*   Updated: 2024/08/30 11:41:27 by dde-carv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*get_next_line(int fd)
 	size_t		len1;
 	int			nl;
 
-	if (BUFFER_SIZE <= 0 || (read(fd, 0, 0) < 0))
+	if (BUFFER_SIZE <= 0 || fd < 0)
 		return (NULL);
 	line = NULL;
 	nl = 0;
