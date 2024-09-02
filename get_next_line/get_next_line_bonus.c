@@ -6,7 +6,7 @@
 /*   By: dde-carv <dde-carv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 16:56:00 by dde-carv          #+#    #+#             */
-/*   Updated: 2024/08/30 11:41:27 by dde-carv         ###   ########.fr       */
+/*   Updated: 2024/09/02 16:53:21 by dde-carv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ int main(void)
 		free(line[0]);
 		free(line[1]);
 	}
+	free(line[0]);
+	free(line[1]);
 	close(fd[0]);
 	close(fd[1]);
 	return 0;
